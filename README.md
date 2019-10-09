@@ -1,4 +1,4 @@
-# sspanesar
+# simranpanesar.me
 
 www.simranpanesar.me
 
