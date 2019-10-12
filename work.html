@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Simran Singh Panesar's personal website.">
     <title>Simran Singh Panesar | Work</title>
     <link rel="stylesheet" href="styles.css">
     <style>
@@ -19,7 +20,7 @@
                     <span></span>
                     <span></span>
                     <ul id="PageNames">
-                        <li> <a href="about.html">Home</a> </li>
+                        <li> <a href="about.html">About</a> </li>
                         <li> <a href="work.html">Work</a> </li>
                         <li> <a href="contact.html">Contact</a> </li>
                     </ul>
@@ -78,7 +79,6 @@
 
                 <div class="WorkItem">
                     <div class="Title">
-                        <div class="Logo"></div>
                         <div class="WorkItemBG" style="background-image:url(images/AIAALogo.png)"></div>
                         <div class="Subtitle"> Air Taxi Concept Designs</div>
                         <div class="Description">
@@ -92,11 +92,10 @@
 
                 <div class="WorkItem">
                     <div class="Title">    
-                        <div class="Logo"></div>
                         <div class="WorkItemBG" style="background-image:url(images/Infinity.png)"></div>
                         <div class="Subtitle"> Long Haul/A380 Replacement</div>
                         <div class="Description">
-                            <p>In my third year of university, I took part in a design project to develop a new long haul aircraft, specifically targeted at replacing the A380. Due to the very high seating capacity and lack of orders, the aircraft has now stopped production. <br>My design employed a double-bubble design to allow one half to accommodate for first and business class, and the other for economy. Two high bypass ratio engines were used as opposed to four to reduce noise, and a fully composite body with no windows for increased structural rigidity.</p>
+                            <p>In my third year of university, I took part in a design project to develop a new long haul aircraft, specifically targeted at replacing the A380. Due to the very high seating capacity and lack of orders, the aircraft has now stopped production. <br>My design employed a double-bubble fuselage to allow one half to accommodate for first and business class, and the other for economy. Two high bypass ratio engines were used as opposed to four to reduce noise, and a fully composite body with no windows for increased structural rigidity.</p>
                             <div class="MediaButton">
                                     <a href="Aircraft Design – A380 Replacement.pdf" class="ADButton"> View report</a>
                             </div>                      
@@ -108,6 +107,16 @@
     </div>
 </body>
 <script>
-
+    const WorkItems = document.querySelectorAll('.Title')
+    WorkItems.forEach(WorkItem => {
+        WorkItem.addEventListener('mouseover',() => {
+            console.log(WorkItem.childNodes);
+            WorkItem.childNodes[1].classList.add('img-darken');
+        })
+    
+        WorkItem.addEventListener('mouseout',() => {
+            WorkItem.childNodes[1].classList.remove('img-darken');
+        })
+    })
 </script>
 </html>
